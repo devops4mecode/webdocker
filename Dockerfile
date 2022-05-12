@@ -11,7 +11,7 @@ FROM build-env AS publish
 RUN dotnet publish -c Release -o /app
 
 # STAGE03 - Create the final image
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM microsoft/dotnet:2.1-aspnetcore-runtime-bionic
 WORKDIR /app
 LABEL Author="Najib Radzuan"
 LABEL Maintainer="devops4me"
